@@ -15,7 +15,7 @@ sudo pacman -S nitrogen
 sudo pacman -S galculator
 sudo pacman -S vlc
 
-sudo pacman -S neovim rofi polybar picom chromium
+sudo pacman -S neovim rofi polybar picom chromium galcculator
 
 sudo pacman -S btop bat cmatrix flatpak
 
@@ -23,6 +23,7 @@ sudo pacman -S btop bat cmatrix flatpak
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub org.onlyoffice.desktopeditors
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
 
 mv ~/arch/bashrc ~/.bashrc
 mv ~/picom.conf ~/.config/herbstluftwm
