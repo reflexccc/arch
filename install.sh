@@ -22,6 +22,7 @@ sudo pacman -S btop bat cmatrix flatpak
 # flatpaks
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub md.obsidian.Obsidian
+flatpak install flathub org.onlyoffice.desktopeditors
 
 mv ~/arch/bashrc ~/.bashrc
 mv ~/picom.conf ~/.config/herbstluftwm
