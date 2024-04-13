@@ -11,19 +11,12 @@ makepkg -fsri
 sudo pacman -S kitty
 # inst alacritty
 
-sudo pacman -S nitrogen
-sudo pacman -S galculator
-sudo pacman -S vlc
+sudo pacman -S nitrogen galculator vlc
 
-sudo pacman -S neovim rofi polybar picom chromium galcculator neofetch
-
-sudo pacman -S btop bat cmatrix flatpak
+sudo pacman -S neovim rofi polybar picom chromium galcculator neofetch btop bat cmatrix flatpak
 
 # flatpaks
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub md.obsidian.Obsidian
-flatpak install flathub org.onlyoffice.desktopeditors
-flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
+flatpak install flathub com.discordapp.Discord md.obsidian.Obsidian org.onlyoffice.desktopeditors com.github.IsmaelMartinez.teams_for_linux
 
 mv ~/arch/bashrc ~/.bashrc
 mv ~/picom.conf ~/.config/herbstluftwm
