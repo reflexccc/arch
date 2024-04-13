@@ -15,7 +15,7 @@ sudo pacman -S nitrogen
 sudo pacman -S galculator
 sudo pacman -S vlc
 
-sudo pacman -S neovim rofi polybar picom chromium galcculator
+sudo pacman -S neovim rofi polybar picom chromium galcculator neofetch
 
 sudo pacman -S btop bat cmatrix flatpak
 
