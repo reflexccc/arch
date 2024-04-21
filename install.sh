@@ -13,7 +13,7 @@ sudo pacman -S kitty
 
 sudo pacman -S nitrogen galculator vlc
 
-sudo pacman -S neovim rofi polybar picom chromium galcculator neofetch btop bat cmatrix flatpak
+sudo pacman -S neovim rofi polybar picom chromium galculator neofetch btop bat cmatrix flatpak
 
 # flatpaks
 flatpak install flathub com.discordapp.Discord md.obsidian.Obsidian org.onlyoffice.desktopeditors com.github.IsmaelMartinez.teams_for_linux
