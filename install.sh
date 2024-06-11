@@ -1,13 +1,3 @@
-# install herbstluftwm
-sudo pacman -S herbstluftwm
-mkdir -p ~/.config/herbstluftwm
-
-# install pikaur
-sudo pacman -S --needed base-devel git
-git clone https://aur.archlinux.org/pikaur.git
-cd pikaur
-makepkg -fsri
-
 sudo pacman -S kitty
 # inst alacritty
 
