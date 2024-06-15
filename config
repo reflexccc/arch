@@ -1,0 +1,96 @@
+{
+"layer": "top",
+"position": "top",
+"height": 24,
+"margin-bottom":6,
+"margin-top":8,
+
+"modules-left": ["hyprland/workspaces"],
+"modules-center": ["clock"],
+"modules-right":  ["network", "pulseaudio", "battery"],
+
+"battery": {
+  "states": {
+  "warning": 30,
+  "critical": 15
+  },
+  "format": "󰁹&#8239;{capacity}%",
+  "format-charging": "󰁹&#8239;{capacity}%",
+  "format-plugged": "󰁹&#8239;{capacity}%",
+  "format-icons": ["", "", "", "", "", "", ""],
+},
+"hyprland/workspaces": {
+     "sort-by-name": true,
+     "on-click": "activate"
+},
+"hyprland/window": {
+    "format": "{}",
+    "max-length": 200,
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 24,
+},
+"sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+},
+"tray": {
+    "icon-size": 16,
+    "spacing": 6
+},
+"clock": {
+    "locale": "C",
+    "format": "{:%d.%b %H:%M}",
+    "format-alt": " {:%a, %b %d}" // Icon: calendar-alt
+},
+"cpu": {
+    "format": " &#8239;{usage}%",
+    "tooltip": false,
+    "on-click": "kitty -e 'btop'"
+},
+"memory": {
+    "interval": 30,
+    "format": "󰒋 {used:0.2f}GB",
+    "max-length": 10,
+    "tooltip": false,
+    "warning": 70,
+    "critical": 90,
+    "on-click": "kitty -e 'btop'"
+},
+"disk": {
+	"interval": 30,
+	"format": "{specific_used}/{specific_total} on {path}",
+  "path": "/",
+  "unit": "TB",
+},
+"network": {
+  "interval": 2,
+  "format-wifi": " {signalStrength}%",
+  "format-ethernet": "",
+  "format-disconnected": " Disconnected",
+  "format-disabled": "",
+  "tooltip": false,
+  "max-length": 20,
+  "min-length": 6,
+  "format-alt": "{essid}",
+},
+
+"idle_inhibitor": {
+	"format": "{icon}",
+	"format-icons": { "activated": " ", "deactivated": " " }
+},
+
+"pulseaudio": {
+  // "scroll-step": 1, // %, can be a float
+  "format": "󰕾 {volume}%",
+  "format-muted": "  {format_source}",
+  "on-click": "kitty -e pulsemixer",
+},
+
+"backlight": {
+  "device": "intel_backlight",
+  "format": "{percent}% ",
+  "format-icons": ["", ""],
+  "on-scroll-up": "xbacklight -inc 5",
+  "on-scroll-down": "xbacklight -dec 5",
+},
+}
