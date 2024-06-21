@@ -1,4 +1,4 @@
-###
+#
 # https://fishshell.com/docs/current/index.html
 # https://github.com/jorgebucaran/cookbook.fish
 
@@ -389,6 +389,8 @@ alias gc="git clone"
 alias v="nvim"
 alias sv="sudo nvim"
 alias clr="clear"
+alias sort="python3.12 ~/Dateien/Programmieren/Projekte/DownloadSortieren/sortieren.py"
+#alias vlc="vlc --enable-features=UseOzonePlatform --ozone-platform=wayland %U"
 
 #moving your personal files and folders from /personal to ~
 function personal
@@ -402,7 +404,7 @@ end
 alias undopush "git push -f origin HEAD^:master"
 
 # reporting tools - install when not installed
-neofetch | lolcat
+neofetch
 #screenfetch
 #alsi
 #paleofetch
@@ -453,3 +455,4 @@ set fish_pager_color_progress brwhite --background=cyan
 set fish_color_search_match --background="#60AEFF"
 
 starship init fish | source
+zoxide init fish | source
