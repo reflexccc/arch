@@ -1,131 +1,53 @@
-{
-"layer": "top",
-"position": "top",
-"height": 33,
-"margin-bottom":4,
-"margin-top":4,
+max-history=100
+sort=-time
 
-"modules-left": ["hyprland/workspaces", "hyprland/window"],
-"modules-center": ["clock"],
-"modules-right":  ["custom/wl-gammarelay-temperature", "custom/wl-gammarelay-brightness", "pulseaudio", "battery"],
+# BINDING OPTIONS
+on-button-left=dismiss-all
+on-button-middle=dismiss-all
+on-button-right=dismiss-all
+on-touch=dismiss-all
+#on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
-"custom/wl-gammarelay-temperature": {
-  "format": "{} ",
-  "exec": "wl-gammarelay-rs watch {t}",
-  "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +50",
-  "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -50"
-},
-"custom/wl-gammarelay-brightness": {
-  "format": "{}% ",
-  "exec": "wl-gammarelay-rs watch {bp}",
-  "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.01",
-  "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.01"
-},
-"battery": {
-  "states": {
-  "90": 90,
-  "80": 80,
-  "70": 70,
-  "60": 60,
-  "50": 50,
-  "40": 40,
-  "30": 30,
-  "20": 20,
-  "warning": 30,
-  "critical": 15
-  },
-  "format": "󰁹&#8239;{capacity}%",
-  "format-charging": "󰂄&#8239;{capacity}%",
-  "format-90": "󰂂&#8239;{capacity}%",
-  "format-80": "󰂁&#8239;{capacity}%",
-  "format-70": "󰂀&#8239;{capacity}%",
-  "format-60": "󰁿&#8239;{capacity}%",
-  "format-50": "󰁾&#8239;{capacity}%",
-  "format-40": "󰁽&#8239;{capacity}%",
-  "format-30": "󰁼&#8239;{capacity}%",
-  "format-20": "󰁻&#8239;{capacity}%",
-  "format-critical": "󰂃&#8239;{capacity}%",
-  "format-alt": "{time}",
-  "interval": 5,
-  "full-at": 95
-},
-"hyprland/workspaces": {
-     "sort-by-name": true,
-     "on-click": "activate",
-     "on-scroll-up": "hyprctl dispatch workspace e+1",
-     "on-scroll-down": "hyprctl dispatch workspace e-1",
-},
-"hyprland/window": {
-    "format": "{initialTitle}",
-    "max-length": 10,
-    "separate-outputs": true,
-    "icon": true,
-    "icon-size": 24,
-},
-"sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-},
-"tray": {
-    "icon-size": 16,
-    "spacing": 6
-},
-"clock": {
-    "timezone": "Europe/Berlin",
-    "locale": "de_DE.UTF-8",
-    "format": "{:%R}",
-    "format-alt": "{:%d.%b   %h:%m}",
-    // Icon: calendar-alt
-    "interval": 1,
-},
-"cpu": {
-    "format": " &#8239;{usage}%",
-    "tooltip": false,
-    "on-click": "kitty -e 'btop'"
-},
-"memory": {
-    "interval": 30,
-    "format": "󰒋 {used:0.2f}GB",
-    "max-length": 10,
-    "tooltip": false,
-    "warning": 70,
-    "critical": 90,
-    "on-click": "kitty -e 'btop'"
-},
-"disk": {
-	"interval": 30,
-	"format": "{specific_used}/{specific_total} on {path}",
-  "path": "/",
-  "unit": "TB",
-},
-"network": {
-  "interval": 2,
-  "format-wifi": " {signalStrength}%",
-  "format-ethernet": "",
-  "format-disconnected": " Disconnected",
-  "format-disabled": "",
-  "tooltip": false,
-  "max-length": 20,
-  "min-length": 6,
-  "format-alt": "{essid}",
-},
+# STYLE OPTIONS
+font=Noto Sans 11
+width=250
+height=100
+margin=10
+padding=15
+border-size=2
+border-radius=0
+icons=1
+max-icon-size=48
+icon-location=left
+markup=1
+actions=1
+history=1
+text-alignment=left
+default-timeout=7
+ignore-timeout=0
+max-visible=5
+layer=overlay
+anchor=top-right
 
-"idle_inhibitor": {
-	"format": "{icon}",
-	"format-icons": { "activated": " ", "deactivated": " " }
-},
+background-color=#999999
+text-color=#F2F2F2
+border-color=#F2F2F2
+progress-color=over #000000
 
-"pulseaudio": {
-  "scroll-step": 1, // %, can be a float
-  "format": "󰕾 {volume}%",
-  "format-muted": "",
-  "on-click": "kitty -e pulsemixer",
-},
+[urgency=low]
+border-color=#000000
+default-timeout=2000
 
-"backlight": {
-  "device": "intel_backlight",
-  "format": "{percent}% ",
-  "format-icons": ["", ""],
-  "on-scroll-up": "xbacklight -inc 5",
-  "on-scroll-down": "xbacklight -dec 5",
-},
-}
+[urgency=normal]
+border-color=#000000
+default-timeout=5000
+
+[urgency=high]
+border-color=#E60000
+text-color=#F2F2F2
+default-timeout=0
+
+[category=mpd]
+border-color=#999999
+default-timeout=2000
+group-by=category
