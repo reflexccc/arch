@@ -1,4 +1,4 @@
-sudo pacman -S alacritty galculator vlc neovim neofetch btop bat cmatrix flatpak obsidian zsh zsh-autocomplete pamixer ranger
+sudo pacman -S alacritty galculator vlc neovim neofetch btop bat cmatrix flatpak zsh zsh-autocomplete pamixer ranger
 
 # git clone --depth=1 https://github.com/adi1090x/rofi.git
 # cd rofi
