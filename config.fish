@@ -389,7 +389,8 @@ alias gc="git clone"
 alias v="nvim"
 alias sv="sudo nvim"
 alias clr="clear"
-alias sort="python3.12 ~/Dateien/Programmieren/Projekte/DownloadSortieren/sortieren.py"
+alias sort="python ~/Dateien/Programmieren/Projekte/DownloadSortieren/sortieren.py"
+alias rechnen="python ~/Dateien/Programmieren/Lernen/Rechner/main.py"
 #alias vlc="vlc --enable-features=UseOzonePlatform --ozone-platform=wayland %U"
 
 #moving your personal files and folders from /personal to ~
@@ -404,7 +405,7 @@ end
 alias undopush "git push -f origin HEAD^:master"
 
 # reporting tools - install when not installed
-neofetch
+#neofetch
 #screenfetch
 #alsi
 #paleofetch
@@ -420,7 +421,7 @@ neofetch
 #colorscript random
 #hyfetch
 
-#cowsay -f stegosaurus "Hello!!!"| lolcat
+cowsay -f stegosaurus "Was geht!!! Ich bin Gregor"| lolcat
 
 # colors to set or unset
 

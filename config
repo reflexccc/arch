@@ -1,53 +1,40 @@
-max-history=100
-sort=-time
+## Wofi Config
 
-# BINDING OPTIONS
-on-button-left=dismiss-all
-on-button-middle=dismiss-all
-on-button-right=dismiss-all
-on-touch=dismiss-all
-#on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+## General
+show=drun
+prompt=Apps
+normal_window=true
+layer=top
+term=alacritty
+columns=1
 
-# STYLE OPTIONS
-font=Noto Sans 11
-width=250
-height=100
-margin=10
-padding=15
-border-size=2
-border-radius=0
-icons=1
-max-icon-size=48
-icon-location=left
-markup=1
-actions=1
-history=1
-text-alignment=left
-default-timeout=7
-ignore-timeout=0
-max-visible=5
-layer=overlay
-anchor=top-right
+## Geometry
+width=550px
+height=450px
+location=0
+orientation=vertical
+halign=fill
+line_wrap=off
+dynamic_lines=false
 
-background-color=#999999
-text-color=#F2F2F2
-border-color=#F2F2F2
-progress-color=over #000000
+## Images
+allow_markup=true
+allow_images=true
+image_size=24
 
-[urgency=low]
-border-color=#000000
-default-timeout=2000
+## Search
+exec_search=false
+hide_search=false
+parse_search=false
+insensitive=true
 
-[urgency=normal]
-border-color=#000000
-default-timeout=5000
+## Other
+hide_scroll=true
+no_actions=true
+sort_order=default
+gtk_dark=true
+filter_rate=100
 
-[urgency=high]
-border-color=#E60000
-text-color=#F2F2F2
-default-timeout=0
-
-[category=mpd]
-border-color=#999999
-default-timeout=2000
-group-by=category
+## Keys
+key_expand=Tab
+key_exit=Escape
