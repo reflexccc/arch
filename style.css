@@ -1,58 +1,84 @@
-* {
-    font-family: "Noto Sans";
-    font-size: 14px;
+*{
+    font-family: JetBrainsMono;
+    font-size: 17px;
+    min-height: 0;
+    color: white;
 }
 
-#window {
-	background-color: --wofi-color0;
-	color: --wofi-color2;
-	border: 0px solid --wofi-color1;
-	border-radius: 0px;
+
+window#waybar {
+    background-color: transparent;
+  }
+.modules-right {
+background-color: #222222;
+padding: 0px 0px 0px 0px;
+border-radius: 18px;
+margin-left: 20px;
+margin-right: 15px;
 }
 
-#outer-box {
-	padding: 20px;
+window#waybar.empty#window{
+  background-color: transparent;
 }
 
-#input {
-	background-color: --wofi-color1;
-	border: 2px solid --wofi-color2;
-    border-radius: 5px;
-	padding: 3px 3px;
+#workspaces{
+    margin-top: 3px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-left: 25px;
 }
 
-#scroll {
-	margin-top: 20px;
-	margin-bottom: 10px;
+#workspaces button{
+    border-radius: 15px;
+    margin-right: 10px;
+    padding: 1px 10px;
+    font-weight: bolder;
+    background-color: #4a4a4a;
 }
 
-#inner-box {
+#workspaces button.active, #workspaces button.focused{
+    padding: 0 22px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    background: #222222;
 }
 
-#img {
-	padding-right: 8px;
+#custom-wl-gammarelay-brightness,
+#pulseaudio,
+#custom-wl-gammarelay-temperature,
+#battery{
+background: #222222;
+border-radius: 18px 18px 18px 18px;
+padding: 0px 12px;
+margin-right: 0px;
 }
 
-#text {
-	color: --wofi-color2;
+#battery.critical{
+color: #FF0A02;
 }
 
-#text:selected {
-	color: --wofi-color2;
+#battery.charging{
+color: #05AA17;
 }
 
-#entry {
-	padding: 6px;
+#window{
+background: #222222;
+border-radius: 18px;
+padding: 0px 12px;
+margin-left: 20px;
 }
 
-#entry:selected {
-	background-color: --wofi-color0;
-    border: 1px solid --wofi-color2;
-	color: --wofi-color0;
-}
-
-#unselected {
-}
-
-#selected {
+#tray,
+#cpu,
+#memory,
+#sway-mode,
+#backlight,
+#disk,
+#clock,
+#network {
+	padding: 0 15px;
+    background: #222222;
+	border-radius: 18px;
+	min-width: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
