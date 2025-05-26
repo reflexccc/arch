@@ -1,4 +1,4 @@
-sudo pacman -S alacritty galculator vlc neovim neofetch btop bat flatpak zsh zsh-autocomplete pamixer ranger teams-for-linux firefox auto-cpufreq betterbird-de-bin
+sudo pacman -S alacritty galculator vlc neovim neofetch btop bat flatpak zsh zsh-autocomplete pamixer ranger teams-for-linux auto-cpufreq betterbird-de-bin
 
 git clone https://[token]@github.com/reflexccc/Obsidian_Auto.git
 
