@@ -1,4 +1,4 @@
-sudo pacman -S alacritty galculator vlc vim yay neovim neofetch btop bat zsh zsh-autocomplete pamixer teams-for-linux auto-cpufreq betterbird-bin obsidian wofi vscodium dolphin lolcat cowsay flameshot spotify
+sudo pacman -S alacritty galculator vlc vim yay neovim neofetch btop bat zsh zsh-autocomplete pamixer teams-for-linux auto-cpufreq betterbird-bin obsidian wofi vscodium dolphin lolcat cowsay flameshot spotify zoxide starship
 
 cd ~/Downloads
 
