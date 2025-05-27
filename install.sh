@@ -26,3 +26,8 @@ mv fish_config ~/.config/fish/config.fish
 mv alacritty_config ~/.config/alacritty/alacritty.toml
 
 mv a_foggy_forest_with_trees_and_bushes.png ~/Bilder/
+
+mkdir ~/.config/dunst/
+mv dunst_config ~/.config/dunst/dunstrc
+
+echo FERTIG!!!!
