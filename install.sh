@@ -2,11 +2,25 @@ sudo pacman -S alacritty galculator vlc vim yay neovim neofetch btop bat zsh zsh
 
 cd ~/Downloads
 
-git clone https://[token]@github.com/reflexccc/Obsidian_Auto.git
-git clone https://[token]@github.com/reflexccc/arch.git 
+echo "Token: "
+read token
 
-mv ~/Downloads/arch/hyprland_config ~/.config/hypr/hyprland.conf
-mv ~/Downloads/arch/waybar_style ~/.config/waybar/style.css
-mv ~/Downloads/arch/config.fish ~/.config/fish/config.fish
-mv ~/Downloads/arch/config ~/.config/waybar/config
+git clone https://$token@github.com/reflexccc/Obsidian_Auto.git
+git clone https://$token@github.com/reflexccc/arch.git 
 
+cd arch/
+
+mv hyprland_config ~/.config/hypr/hyprland.conf
+
+mkdir ~/.config/waybar/
+mv waybar_config ~/.config/waybar/config
+mv waybar_style ~/.config/waybar/style.css
+
+mkdir ~/.config/wofi/
+mv wofi_colors ~/.config/wofi/colors
+mv wofi_config ~/.config/wofi/config
+mv wofi_style ~/.config/wofi/style.css
+
+mv fish_config ~/.config/fish/config.fish
+
+mv alacritty_config ~/.config/alacritty.toml
