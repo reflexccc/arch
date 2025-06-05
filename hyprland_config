@@ -46,8 +46,8 @@ env = XCURSOR_SIZE,24
 # Startup
 exec-once = waybar
 exec-once = cpupower frequency-set -g powersave
-exec-once = mako --config ~/.config/mako/config
-exec-once = swaybg -m fill -i ~/Bilder/a_foggy_forest_with_trees_and_bushes.png
+exec-once = dunst -conf "~/.config/dunst/dunstrc"
+exec-once = swaybg -m fill -i ~/Media/a_foggy_forest_with_trees_and_bushes.png
 #exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6800
 exec-once = busctl --user set-propert rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +1.00
