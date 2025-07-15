@@ -1,4 +1,4 @@
-sudo pacman -S alacritty galculator vlc vim yay neovim neofetch btop bat zsh zsh-autocomplete pamixer teams-for-linux auto-cpufreq betterbird-bin obsidian wofi vscodium dolphin lolcat cowsay flameshot spotify zoxide starship
+sudo pacman -S alacritty galculator vlc vim yay neovim neofetch btop bat zsh zsh-autocomplete pamixer teams-for-linux auto-cpufreq betterbird-bin obsidian wofi vscodium dolphin lolcat cowsay flameshot spotify zoxide waybar starship
 
 cd ~/Downloads
 
@@ -8,6 +8,13 @@ read token
 git clone https://$token@github.com/reflexccc/Obsidian_Auto.git
 git clone https://$token@github.com/reflexccc/arch.git 
 
+mkdir ~/Dateien
+mkdir ~/Media
+mkdir ~/Scripts
+mkdir ~/Ordner
+mkdir ~/Rest
+
+mv Obsidian_Auto/ ~/Dateien/
 cd arch/
 
 mv hyprland_config ~/.config/hypr/hyprland.conf
@@ -31,4 +38,4 @@ mv bg_1.jpg ~/Media/
 mkdir ~/.config/dunst/
 mv dunst_config ~/.config/dunst/dunstrc
 
-echo FERTIG!!!!
+echo "FERTIG!!!!"
