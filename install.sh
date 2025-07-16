@@ -16,6 +16,7 @@ mkdir ~/Rest
 
 mv Obsidian_Auto/ ~/Dateien/
 cd arch/
+mv Themes ~/Dateien/
 
 mv hyprland_config ~/.config/hypr/hyprland.conf
 
