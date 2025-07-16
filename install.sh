@@ -6,7 +6,6 @@ echo "Token: "
 read token
 
 git clone https://$token@github.com/reflexccc/Obsidian_Auto.git
-git clone https://$token@github.com/reflexccc/arch.git 
 
 mkdir ~/Dateien
 mkdir ~/Media
