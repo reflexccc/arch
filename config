@@ -1,0 +1,6 @@
+width=300
+height=250
+mode=dmenu
+style=style
+filter_rate=100
+allow_images=true
