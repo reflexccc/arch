@@ -2,21 +2,19 @@
 "layer": "top",
 "position": "top",
 "height": 33,
-"margin-bottom":4,
-"margin-top":4,
 
 "modules-left": ["hyprland/workspaces", "hyprland/window"],
-"modules-center": ["clock"],
+"modules-center": ["network", "clock", "bluetooth"],
 "modules-right":  ["custom/wl-gammarelay-temperature", "custom/wl-gammarelay-brightness", "pulseaudio", "battery"],
 
 "custom/wl-gammarelay-temperature": {
-  "format": "{} ",
+  "format": " {}   ",
   "exec": "wl-gammarelay-rs watch {t}",
   "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +50",
   "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -50"
 },
 "custom/wl-gammarelay-brightness": {
-  "format": "{}% ",
+  "format": " {}%   ",
   "exec": "wl-gammarelay-rs watch {bp}",
   "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.01",
   "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.01"
@@ -34,7 +32,7 @@
   "warning": 30,
   "critical": 15
   },
-  "format": "󰁹&#8239;{capacity}%",
+  "format": "󰁹&#8239;{capacity}% ",
   "format-charging": "󰂄&#8239;{capacity}%",
   "format-90": "󰂂&#8239;{capacity}%",
   "format-80": "󰂁&#8239;{capacity}%",
@@ -45,15 +43,24 @@
   "format-30": "󰁼&#8239;{capacity}%",
   "format-20": "󰁻&#8239;{capacity}%",
   "format-critical": "󰂃&#8239;{capacity}%",
-  "format-alt": "{time}",
   "interval": 5,
   "full-at": 95
 },
 "hyprland/workspaces": {
-     "sort-by-name": true,
+     "format": "{icon}",
+     "format-icons":{
+        "1": "󰦨 ",
+        "2": "󰖟 ",
+        "3": "󰇘 "
+     },
      "on-click": "activate",
      "on-scroll-up": "hyprctl dispatch workspace e+1",
      "on-scroll-down": "hyprctl dispatch workspace e-1",
+     "persistent-workspaces": {
+        "1": [], 
+        "2": [], 
+        "3": [] 
+    }
 },
 "hyprland/window": {
     "format": "{initialTitle}",
@@ -62,9 +69,6 @@
     "icon": true,
     "icon-size": 24,
 },
-"sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-},
 "tray": {
     "icon-size": 16,
     "spacing": 6
@@ -72,10 +76,9 @@
 "clock": {
     "timezone": "Europe/Berlin",
     "locale": "de_DE.UTF-8",
-    "format": "{:%R}",
-    "format-alt": "{:%d.%b   %R}",
-    // Icon: calendar-alt
-    "interval": 1,
+    "format": "{:%R}   ",
+    "format-alt": "{:%d.%m}  ",
+    "interval": 1
 },
 "cpu": {
     "format": " &#8239;{usage}%",
@@ -99,14 +102,27 @@
 },
 "network": {
   "interval": 2,
-  "format-wifi": " {signalStrength}%",
-  "format-ethernet": "",
-  "format-disconnected": " Disconnected",
-  "format-disabled": "",
+  "format-wifi": " ",
+  "format-disconnected": " ",
+  "format-disabled": "󰖪 ",
   "tooltip": false,
   "max-length": 20,
-  "min-length": 6,
-  "format-alt": "{essid}",
+  "min-length": 6
+},
+
+"bluetooth": {
+  "interval": 2,
+  "format":"{status}",
+  "format-on": "󰂯 ",
+  "format-off": "󰂲 ",
+  "format-disabled": "󰂲 ",
+  "format-connected": "󰂯 ",
+  "on-click": "bash ~/.config/wofi-bluetooth/wofi-bluetooth"
+},
+
+"custom/wofi":{
+  "format":" ",
+  "on-click": "wofi --conf ~/.config/wofi/config --style ~/.config/wofi/style.css"
 },
 
 "idle_inhibitor": {
@@ -116,9 +132,8 @@
 
 "pulseaudio": {
   "scroll-step": 1, // %, can be a float
-  "format": "󰕾 {volume}%",
-  "format-muted": "",
-  "on-click": "kitty -e pulsemixer",
+  "format": "󰕾 {volume}%   ",
+  "format-muted": ""
 },
 
 "backlight": {
