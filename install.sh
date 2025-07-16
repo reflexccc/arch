@@ -1,6 +1,6 @@
 sudo pacman -S alacritty galculator vlc vim yay neovim neofetch btop bat zsh zsh-autocomplete pamixer teams-for-linux auto-cpufreq betterbird-bin obsidian wofi vscodium dolphin lolcat cowsay flameshot spotify zoxide waybar starship
 
-cd ~/Downloads
+cd ~/Downloads/
 
 echo "Token: "
 read token
@@ -17,6 +17,13 @@ mkdir ~/Rest
 mv Obsidian_Auto/ ~/Dateien/
 cd arch/
 mv Themes ~/Dateien/
+
+cd ~/.config/
+git clone https://github.com/techkek/wofi-bluetooth/
+cd ~/Downloads/arch/
+
+mv wofi-bluetooth ~/.config/wofi-bluetooth/
+mv wofi-bluetooth-config ~/.config/wofi-bluetooth/
 
 mv hyprland_config ~/.config/hypr/hyprland.conf
 
